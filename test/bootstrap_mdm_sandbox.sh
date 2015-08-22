@@ -132,7 +132,7 @@ mkdir -p /root/docker/
 remove_vagrant_user_from_root
 
 log "Install autostart script for /etc/init.d/mdm_sandbox"
-curl -o /etc/init.d/mdm_sandbox https://raw.githubusercontent.com/TOTVS/mdmpublic/master/test/mdm_sandbox.sh
+curl -o /etc/init.d/mdm_sandbox https://raw.githubusercontent.com/brunocvcunha/mdmpublic/master/test/mdm_sandbox.sh
 chmod 755 /etc/init.d/mdm_sandbox
 update-rc.d mdm_sandbox defaults
 update-rc.d mdm_sandbox enable
