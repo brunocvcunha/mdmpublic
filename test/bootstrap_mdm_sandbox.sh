@@ -156,7 +156,7 @@ if [ $container_status = "running" ] && [ "$image_has_new_version" = "yes" ]; th
 fi
 
 if [ $container_status = "none" ]; then
-    docker run -d -t --privileged -v /root/docker/:/var/lib/jenkins/code/ --name $container_name -p 5022:22 -p 18000:18000 -p 18080:18080 $image_name /usr/sbin/sshd -D
+    docker run -d -t --privileged -v /root/docker/:/var/lib/jenkins/code/ --name $container_name -p 5022:22 -p 18000:18000 -p 18080:18080 -p 62911:62911 $image_name /usr/sbin/sshd -D
 elif [ $container_status = "dead" ]; then 
     docker start $container_name    
 fi
